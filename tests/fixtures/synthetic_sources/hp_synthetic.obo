@@ -1,0 +1,89 @@
+format-version: 1.2
+data-version: hp/releases/synthetic-2026-10-01
+remark: SYNTHETIC TEST FIXTURE - not the Human Phenotype Ontology
+
+[Term]
+id: HP:0000001
+name: All
+
+[Term]
+id: HP:0000005
+name: Mode of inheritance
+is_a: HP:0000001 ! All
+
+[Term]
+id: HP:0000118
+name: Phenotypic abnormality
+is_a: HP:0000001 ! All
+
+[Term]
+id: HP:9000010
+name: Synthetic abnormality of the nervous system
+is_a: HP:0000118 ! Phenotypic abnormality
+
+[Term]
+id: HP:9000011
+name: Synthetic seizure
+alt_id: HP:9000099
+synonym: "Synthetic fit" EXACT []
+synonym: "Synthetic convulsive episode" RELATED []
+synonym: "Synthetic paroxysm" BROAD []
+is_a: HP:9000010 ! Synthetic abnormality of the nervous system
+
+[Term]
+id: HP:9000012
+name: Synthetic focal seizure
+is_a: HP:9000011 ! Synthetic seizure
+
+[Term]
+id: HP:9000013
+name: Synthetic developmental delay
+is_a: HP:9000010 ! Synthetic abnormality of the nervous system
+
+[Term]
+id: HP:9000014
+name: Synthetic hypotonia
+synonym: "Synthetic floppiness" EXACT []
+is_a: HP:9000010 ! Synthetic abnormality of the nervous system
+is_a: HP:9000020 ! Synthetic abnormality of muscle
+
+[Term]
+id: HP:9000015
+name: Synthetic ataxia
+is_a: HP:9000010 ! Synthetic abnormality of the nervous system
+
+[Term]
+id: HP:9000016
+name: Synthetic tremor
+is_a: HP:9000010 ! Synthetic abnormality of the nervous system
+
+[Term]
+id: HP:9000020
+name: Synthetic abnormality of muscle
+is_a: HP:0000118 ! Phenotypic abnormality
+
+[Term]
+id: HP:9000030
+name: obsolete Synthetic old seizure term
+is_obsolete: true
+replaced_by: HP:9000011
+
+[Term]
+id: HP:9000031
+name: obsolete Synthetic ambiguous term
+is_obsolete: true
+
+[Term]
+id: HP:9000040
+name: Synthetic rare sign
+is_a: HP:9000010 ! Synthetic abnormality of the nervous system
+
+[Term]
+id: HP:9000050
+name: Synthetic gaze palsy
+synonym: "Synthetic eye movement limitation" NARROW []
+is_a: HP:9000010 ! Synthetic abnormality of the nervous system
+
+[Typedef]
+id: part_of
+name: part of

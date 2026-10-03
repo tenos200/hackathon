@@ -1,0 +1,37 @@
+{
+  "contract_version": "1.0.0",
+  "snapshot_id": "snap_fixture_20261003",
+  "data_mode": "synthetic_fixture",
+  "data": {
+    "query": "alpha",
+    "matches": [
+      {
+        "id": "TEST:GENE_ALPHA",
+        "entity_type": "gene",
+        "label": "Synthetic ALPHA gene",
+        "matched_alias": "alpha",
+        "ambiguous": true,
+        "contexts": [
+          {
+            "id": "ctx:alpha-loss",
+            "label": "Synthetic alpha-loss research context",
+            "profile_level": "subgroup",
+            "mechanism_known": true
+          },
+          {
+            "id": "ctx:alpha-gain",
+            "label": "Synthetic alpha-gain research context",
+            "profile_level": "subgroup",
+            "mechanism_known": true
+          }
+        ]
+      }
+    ]
+  },
+  "warnings": [
+    {
+      "code": "SYNTHETIC_DATA",
+      "message": "Invented interface fixtures. Not scientific evidence."
+    }
+  ]
+}

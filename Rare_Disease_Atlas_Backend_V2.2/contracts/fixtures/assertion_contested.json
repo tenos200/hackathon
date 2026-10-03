@@ -1,0 +1,154 @@
+{
+  "contract_version": "1.0.0",
+  "snapshot_id": "snap_fixture_20261003",
+  "data_mode": "synthetic_fixture",
+  "data": {
+    "id": "assert:alpha-loss-mechanism",
+    "subject": {
+      "id": "TEST:DISEASE_ALPHA",
+      "label": "Synthetic Alpha condition"
+    },
+    "predicate": "disease_has_mechanism",
+    "object": {
+      "id": "mech:alpha-loss",
+      "label": "Synthetic loss mechanism"
+    },
+    "context_id": "ctx:alpha-loss",
+    "scope_text": "Synthetic research context only. No patient applicability.",
+    "statement_status": "reported_result",
+    "effect_direction": "not_applicable",
+    "origin": "manual_import",
+    "review": {
+      "status": "accepted",
+      "description": "Fixture validation only; no scientific review has occurred.",
+      "expert_validation": false,
+      "reviewed_content_sha256": "b2473b4f80194d65b4451cd61793bf26d4067a0fa10fca97766b0e05be7e2ec5"
+    },
+    "badges": [
+      {
+        "kind": "synthetic",
+        "label": "Synthetic fixture"
+      },
+      {
+        "kind": "conflict",
+        "label": "Conflicting accounts"
+      }
+    ],
+    "evidence": [
+      {
+        "id": "evidence:assert:alpha-loss-mechanism",
+        "stance": "supports",
+        "kind": "text_spans",
+        "source": {
+          "id": "source:assert:alpha-loss-mechanism",
+          "title": "Synthetic evidence for assert:alpha-loss-mechanism",
+          "url": "https://example.org/atlas-fixture",
+          "external_ref": "SYNTHETIC:assert:alpha-loss-mechanism",
+          "source_kind": "literature",
+          "release_or_version": "fixture-1",
+          "publication_status": "unknown",
+          "canonical_sha256": "f09fe1c9ff59712b398e5ef91304ee01c13bf41a7685eacd6dd38f8e81045084",
+          "raw_sha256": "f09fe1c9ff59712b398e5ef91304ee01c13bf41a7685eacd6dd38f8e81045084",
+          "canonicalizer_version": "synthetic-1",
+          "public_text_policy": "full",
+          "metadata": {
+            "server": null,
+            "doi": null,
+            "manuscript_version": null,
+            "license": "Invented fixture text",
+            "published_doi": null,
+            "publication_family_id": "family:assert:alpha-loss-mechanism",
+            "fetch_backend": "fixture",
+            "original_target_url": "https://example.org/atlas-fixture"
+          }
+        },
+        "context": {
+          "text": "🧪 SYNTHETIC FIXTURE. The fictional alpha-loss group has the illustrative loss mechanism. This fabricated paragraph exists only to test the interface; it supports no real biological conclusion.",
+          "canonical_start": 0,
+          "canonical_end": 192,
+          "highlights": [
+            {
+              "start": 21,
+              "end": 88,
+              "quote": "The fictional alpha-loss group has the illustrative loss mechanism."
+            }
+          ]
+        },
+        "record_locator": null,
+        "study_or_cohort_ids": [],
+        "independence": "unknown",
+        "record_fields": [],
+        "study_design": "synthetic UI example",
+        "species": null,
+        "patient_count": null,
+        "source_native_validity": null,
+        "scope_text": "Invented example only."
+      },
+      {
+        "id": "evidence:assert:alpha-loss-mechanism-opposition",
+        "stance": "opposes",
+        "kind": "text_spans",
+        "source": {
+          "id": "source:assert:alpha-loss-mechanism-opposition",
+          "title": "Synthetic opposing account",
+          "url": "https://example.org/atlas-fixture",
+          "external_ref": "SYNTHETIC:opposition",
+          "source_kind": "literature",
+          "release_or_version": "fixture-1",
+          "publication_status": "unknown",
+          "canonical_sha256": "59c275dbce1f8072b5385e88b353e17356e24f8ba4a722a2253311fdc1d6ba18",
+          "raw_sha256": "59c275dbce1f8072b5385e88b353e17356e24f8ba4a722a2253311fdc1d6ba18",
+          "canonicalizer_version": "synthetic-1",
+          "public_text_policy": "full",
+          "metadata": {
+            "server": null,
+            "doi": null,
+            "manuscript_version": null,
+            "license": "Invented fixture text",
+            "published_doi": null,
+            "publication_family_id": "family:opposition",
+            "fetch_backend": "fixture",
+            "original_target_url": "https://example.org/atlas-fixture"
+          }
+        },
+        "context": {
+          "text": "This synthetic account disputes the fixture mechanism attribution.",
+          "canonical_start": 0,
+          "canonical_end": 66,
+          "highlights": [
+            {
+              "start": 0,
+              "end": 66,
+              "quote": "This synthetic account disputes the fixture mechanism attribution."
+            }
+          ]
+        },
+        "record_locator": null,
+        "study_or_cohort_ids": [],
+        "independence": "unknown",
+        "record_fields": [],
+        "study_design": "synthetic UI example",
+        "species": null,
+        "patient_count": null,
+        "source_native_validity": null,
+        "scope_text": "Invented example only."
+      }
+    ],
+    "conflicts": [
+      {
+        "id": "conflict:example",
+        "comparability": "comparable",
+        "assertion_ids": [
+          "assert:alpha-loss-mechanism"
+        ],
+        "description": "Synthetic disagreement: show both sources, do not suppress the opposing account."
+      }
+    ]
+  },
+  "warnings": [
+    {
+      "code": "SYNTHETIC_DATA",
+      "message": "Invented interface fixtures. Not scientific evidence."
+    }
+  ]
+}

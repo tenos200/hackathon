@@ -1,0 +1,367 @@
+{
+  "contract_version": "1.0.0",
+  "snapshot_id": "snap_fixture_20261003",
+  "data_mode": "synthetic_fixture",
+  "data": {
+    "context_id": "ctx:alpha-loss",
+    "comparisons": [
+      {
+        "id": "comparison:alpha-beta",
+        "context_a": {
+          "id": "ctx:alpha-loss",
+          "label": "Synthetic alpha-loss research context"
+        },
+        "context_b": {
+          "id": "ctx:beta-loss",
+          "label": "Synthetic beta-loss research context"
+        },
+        "disease_baseline": {
+          "mapped_annotation_ids": {
+            "a": [],
+            "b": []
+          },
+          "profile_level": "disease_baseline",
+          "score": 0.3333333333333333,
+          "calculation_id": "calc:alpha-beta-baseline",
+          "same_parent_disease": false,
+          "direct_term_counts": {
+            "a": 2,
+            "b": 2
+          },
+          "publication_counts": {
+            "a": 2,
+            "b": 2
+          },
+          "reference_coverage": {
+            "a": {
+              "direct_terms": 2,
+              "assessed_terms": 2,
+              "fraction": 1.0,
+              "unassessed_term_ids": []
+            },
+            "b": {
+              "direct_terms": 2,
+              "assessed_terms": 2,
+              "fraction": 1.0,
+              "unassessed_term_ids": []
+            }
+          },
+          "input_assertion_ids": {
+            "a": [
+              "assert:alpha-baseline-A",
+              "assert:alpha-baseline-B"
+            ],
+            "b": [
+              "assert:beta-baseline-A",
+              "assert:beta-baseline-C"
+            ]
+          },
+          "shared_terms": [
+            {
+              "id": "TEST:PA",
+              "label": "Example feature A",
+              "ic": 3.0,
+              "score_contribution": 0.3333333333333333,
+              "direct_a": true,
+              "direct_b": true,
+              "input_assertion_ids": [
+                "assert:alpha-baseline-A",
+                "assert:beta-baseline-A"
+              ]
+            }
+          ],
+          "specific_shared_term_ids": [
+            "TEST:PA"
+          ],
+          "missingness": [],
+          "warnings": [
+            {
+              "code": "SPARSE_PROFILE",
+              "message": "Illustrative overlap of two or fewer direct terms per side; not clinical confidence."
+            }
+          ]
+        },
+        "subgroup_comparison": {
+          "mapped_annotation_ids": {
+            "a": [],
+            "b": []
+          },
+          "profile_level": "subgroup",
+          "score": 0.3333333333333333,
+          "calculation_id": "calc:alpha-beta-subgroup",
+          "same_parent_disease": false,
+          "direct_term_counts": {
+            "a": 2,
+            "b": 2
+          },
+          "publication_counts": {
+            "a": 2,
+            "b": 2
+          },
+          "reference_coverage": {
+            "a": {
+              "direct_terms": 2,
+              "assessed_terms": 2,
+              "fraction": 1.0,
+              "unassessed_term_ids": []
+            },
+            "b": {
+              "direct_terms": 2,
+              "assessed_terms": 2,
+              "fraction": 1.0,
+              "unassessed_term_ids": []
+            }
+          },
+          "input_assertion_ids": {
+            "a": [
+              "assert:alpha-loss-A",
+              "assert:alpha-loss-B"
+            ],
+            "b": [
+              "assert:beta-loss-A",
+              "assert:beta-loss-C"
+            ]
+          },
+          "shared_terms": [
+            {
+              "id": "TEST:PA",
+              "label": "Example feature A",
+              "ic": 3.0,
+              "score_contribution": 0.3333333333333333,
+              "direct_a": true,
+              "direct_b": true,
+              "input_assertion_ids": [
+                "assert:alpha-loss-A",
+                "assert:beta-loss-A"
+              ]
+            }
+          ],
+          "specific_shared_term_ids": [
+            "TEST:PA"
+          ],
+          "missingness": [],
+          "warnings": [
+            {
+              "code": "SPARSE_PROFILE",
+              "message": "Illustrative overlap of two or fewer direct terms per side; not clinical confidence."
+            }
+          ]
+        },
+        "ranking_basis": "subgroup",
+        "mechanism_features": [
+          {
+            "dimension": "functional_effect",
+            "comparison": "same",
+            "assertion_ids": [
+              "assert:alpha-loss-mechanism",
+              "assert:beta-loss-mechanism"
+            ],
+            "explanation": "Fictional labels only; shared effect does not establish equivalent biology."
+          }
+        ],
+        "relevant_differences": [
+          "Cell context and transferability are unassessed."
+        ],
+        "unknowns": [
+          "Asset compatibility is not established."
+        ],
+        "summary": [
+          {
+            "text": "A synthetic comparison for interface testing, not a scientific match.",
+            "assertion_ids": [],
+            "calculation_ids": [
+              "calc:alpha-beta-subgroup"
+            ],
+            "opportunity_ids": []
+          }
+        ]
+      },
+      {
+        "id": "comparison:same-disease",
+        "context_a": {
+          "id": "ctx:alpha-loss",
+          "label": "Synthetic alpha-loss research context"
+        },
+        "context_b": {
+          "id": "ctx:alpha-gain",
+          "label": "Synthetic alpha-gain research context"
+        },
+        "disease_baseline": {
+          "mapped_annotation_ids": {
+            "a": [],
+            "b": []
+          },
+          "profile_level": "disease_baseline",
+          "score": 1.0,
+          "calculation_id": "calc:same-disease-baseline",
+          "same_parent_disease": true,
+          "direct_term_counts": {
+            "a": 2,
+            "b": 2
+          },
+          "publication_counts": {
+            "a": 2,
+            "b": 2
+          },
+          "reference_coverage": {
+            "a": {
+              "direct_terms": 2,
+              "assessed_terms": 2,
+              "fraction": 1.0,
+              "unassessed_term_ids": []
+            },
+            "b": {
+              "direct_terms": 2,
+              "assessed_terms": 2,
+              "fraction": 1.0,
+              "unassessed_term_ids": []
+            }
+          },
+          "input_assertion_ids": {
+            "a": [
+              "assert:alpha-baseline-A",
+              "assert:alpha-baseline-B"
+            ],
+            "b": [
+              "assert:alpha-baseline-A",
+              "assert:alpha-baseline-B"
+            ]
+          },
+          "shared_terms": [
+            {
+              "id": "TEST:PA",
+              "label": "Example feature A",
+              "ic": 3.0,
+              "score_contribution": 0.5,
+              "direct_a": true,
+              "direct_b": true,
+              "input_assertion_ids": [
+                "assert:alpha-baseline-A",
+                "assert:alpha-baseline-A"
+              ]
+            },
+            {
+              "id": "TEST:PB",
+              "label": "Example feature B",
+              "ic": 3.0,
+              "score_contribution": 0.5,
+              "direct_a": true,
+              "direct_b": true,
+              "input_assertion_ids": [
+                "assert:alpha-baseline-B",
+                "assert:alpha-baseline-B"
+              ]
+            }
+          ],
+          "specific_shared_term_ids": [
+            "TEST:PA",
+            "TEST:PB"
+          ],
+          "missingness": [],
+          "warnings": [
+            {
+              "code": "SPARSE_PROFILE",
+              "message": "Illustrative overlap of two or fewer direct terms per side; not clinical confidence."
+            }
+          ]
+        },
+        "subgroup_comparison": {
+          "mapped_annotation_ids": {
+            "a": [],
+            "b": []
+          },
+          "profile_level": "subgroup",
+          "score": null,
+          "calculation_id": "calc:same-disease-subgroup",
+          "same_parent_disease": true,
+          "direct_term_counts": {
+            "a": 2,
+            "b": 0
+          },
+          "publication_counts": {
+            "a": 2,
+            "b": 0
+          },
+          "reference_coverage": {
+            "a": {
+              "direct_terms": 2,
+              "assessed_terms": 2,
+              "fraction": 1.0,
+              "unassessed_term_ids": []
+            },
+            "b": {
+              "direct_terms": 0,
+              "assessed_terms": 0,
+              "fraction": null,
+              "unassessed_term_ids": []
+            }
+          },
+          "input_assertion_ids": {
+            "a": [
+              "assert:alpha-loss-A",
+              "assert:alpha-loss-B"
+            ],
+            "b": []
+          },
+          "shared_terms": [],
+          "specific_shared_term_ids": [],
+          "missingness": [
+            "Scoped phenotype evidence missing on at least one side."
+          ],
+          "warnings": [
+            {
+              "code": "SPARSE_PROFILE",
+              "message": "Illustrative overlap of two or fewer direct terms per side; not clinical confidence."
+            }
+          ]
+        },
+        "ranking_basis": "unranked",
+        "mechanism_features": [
+          {
+            "dimension": "functional_effect",
+            "comparison": "different",
+            "assertion_ids": [
+              "assert:alpha-loss-mechanism",
+              "assert:alpha-gain-mechanism"
+            ],
+            "explanation": "Fictional labels only; shared effect does not establish equivalent biology."
+          }
+        ],
+        "relevant_differences": [
+          "Cell context and transferability are unassessed."
+        ],
+        "unknowns": [
+          "Asset compatibility is not established."
+        ],
+        "summary": [
+          {
+            "text": "A synthetic comparison for interface testing, not a scientific match.",
+            "assertion_ids": [],
+            "calculation_ids": [
+              "calc:same-disease-subgroup"
+            ],
+            "opportunity_ids": []
+          }
+        ]
+      }
+    ],
+    "counterexamples": [
+      {
+        "text": "Same parent baseline does not establish subgroup similarity.",
+        "assertion_ids": [],
+        "calculation_ids": [
+          "calc:same-disease-baseline",
+          "calc:same-disease-subgroup"
+        ],
+        "opportunity_ids": []
+      }
+    ],
+    "graph": null
+  },
+  "warnings": [
+    {
+      "code": "SYNTHETIC_DATA",
+      "message": "Invented interface fixtures. Not scientific evidence."
+    }
+  ]
+}

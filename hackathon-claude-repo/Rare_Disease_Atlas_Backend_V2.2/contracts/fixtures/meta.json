@@ -1,0 +1,62 @@
+{
+  "contract_version": "1.0.0",
+  "snapshot_id": "snap_fixture_20261003",
+  "data_mode": "synthetic_fixture",
+  "data": {
+    "published_at": "2026-10-03T00:00:00Z",
+    "content_sha256": "4e2212591c06754fd3eeb44f741fa591a8137e585428578d9f1eaa05e75ecb06",
+    "source_versions": [
+      {
+        "name": "Synthetic interface corpus",
+        "version": "1"
+      }
+    ],
+    "counts": {
+      "documents": 13,
+      "published_assertions": 13,
+      "contexts": 4
+    },
+    "algorithm_version": "fixture-overlap-1",
+    "capabilities": {
+      "live_ai": false,
+      "request_snapshot_pin": false,
+      "graph": false
+    },
+    "example_contexts": [
+      {
+        "id": "ctx:alpha-loss",
+        "label": "Synthetic alpha-loss research context",
+        "profile_level": "subgroup",
+        "mechanism_known": true
+      },
+      {
+        "id": "ctx:alpha-gain",
+        "label": "Synthetic alpha-gain research context",
+        "profile_level": "subgroup",
+        "mechanism_known": true
+      },
+      {
+        "id": "ctx:beta-loss",
+        "label": "Synthetic beta-loss research context",
+        "profile_level": "subgroup",
+        "mechanism_known": true
+      },
+      {
+        "id": "ctx:gap",
+        "label": "Synthetic gap research context",
+        "profile_level": "disease",
+        "mechanism_known": false
+      }
+    ],
+    "limitations": [
+      "All records are invented interface examples.",
+      "Do not show these fixtures as real hackathon research."
+    ]
+  },
+  "warnings": [
+    {
+      "code": "SYNTHETIC_DATA",
+      "message": "Invented interface fixtures. Not scientific evidence."
+    }
+  ]
+}

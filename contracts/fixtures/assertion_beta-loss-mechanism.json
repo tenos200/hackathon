@@ -1,0 +1,92 @@
+{
+  "contract_version": "1.0.0",
+  "snapshot_id": "snap_fixture_20261003",
+  "data_mode": "synthetic_fixture",
+  "data": {
+    "id": "assert:beta-loss-mechanism",
+    "subject": {
+      "id": "TEST:DISEASE_BETA",
+      "label": "Synthetic Beta condition"
+    },
+    "predicate": "disease_has_mechanism",
+    "object": {
+      "id": "mech:beta-loss",
+      "label": "Synthetic loss mechanism"
+    },
+    "context_id": "ctx:beta-loss",
+    "scope_text": "Synthetic research context only. No patient applicability.",
+    "statement_status": "reported_result",
+    "effect_direction": "not_applicable",
+    "origin": "manual_import",
+    "review": {
+      "status": "accepted",
+      "description": "Fixture validation only; no scientific review has occurred.",
+      "expert_validation": false,
+      "reviewed_content_sha256": "80e671768ed5fa7f3d28d7f6a8afd3c65c2a361f35e507a6cc613001f286ed41"
+    },
+    "badges": [
+      {
+        "kind": "synthetic",
+        "label": "Synthetic fixture"
+      }
+    ],
+    "evidence": [
+      {
+        "id": "evidence:assert:beta-loss-mechanism",
+        "stance": "supports",
+        "kind": "text_spans",
+        "source": {
+          "id": "source:assert:beta-loss-mechanism",
+          "title": "Synthetic evidence for assert:beta-loss-mechanism",
+          "url": "https://example.org/atlas-fixture",
+          "external_ref": "SYNTHETIC:assert:beta-loss-mechanism",
+          "source_kind": "literature",
+          "release_or_version": "fixture-1",
+          "publication_status": "unknown",
+          "canonical_sha256": "373582e425cd84ad1f96f7722935105ec1d4095374cddb39669642e21ecb3ab7",
+          "raw_sha256": "373582e425cd84ad1f96f7722935105ec1d4095374cddb39669642e21ecb3ab7",
+          "canonicalizer_version": "synthetic-1",
+          "public_text_policy": "full",
+          "metadata": {
+            "server": null,
+            "doi": null,
+            "manuscript_version": null,
+            "license": "Invented fixture text",
+            "published_doi": null,
+            "publication_family_id": "family:assert:beta-loss-mechanism",
+            "fetch_backend": "fixture",
+            "original_target_url": "https://example.org/atlas-fixture"
+          }
+        },
+        "context": {
+          "text": "🧪 SYNTHETIC FIXTURE. The fictional beta-loss group has the illustrative loss mechanism. This fabricated paragraph exists only to test the interface; it supports no real biological conclusion.",
+          "canonical_start": 0,
+          "canonical_end": 191,
+          "highlights": [
+            {
+              "start": 21,
+              "end": 87,
+              "quote": "The fictional beta-loss group has the illustrative loss mechanism."
+            }
+          ]
+        },
+        "record_locator": null,
+        "study_or_cohort_ids": [],
+        "independence": "unknown",
+        "record_fields": [],
+        "study_design": "synthetic UI example",
+        "species": null,
+        "patient_count": null,
+        "source_native_validity": null,
+        "scope_text": "Invented example only."
+      }
+    ],
+    "conflicts": []
+  },
+  "warnings": [
+    {
+      "code": "SYNTHETIC_DATA",
+      "message": "Invented interface fixtures. Not scientific evidence."
+    }
+  ]
+}

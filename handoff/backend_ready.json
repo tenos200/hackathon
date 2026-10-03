@@ -1,0 +1,49 @@
+{
+  "_status": "NOT DEPLOYED. No Render service, Supabase project or real snapshot exists yet. Null URLs are deliberate; do not treat this file as evidence of deployment. Update after real checks.",
+  "contract_version": "1.0.0",
+  "contract_sha256": "3eedc557dc8be2e7d82e3bb00213f6a7fa906141de72b246fe115771b53b845c",
+  "fixtures_sha256": "ca02ddde6de94dcbeac208d154c7e49df4cf1b1e196e2db8489c133455f34355",
+  "api_base_url": null,
+  "openapi_url": null,
+  "readiness_url": null,
+  "snapshot_id": null,
+  "data_mode": null,
+  "git_commit": "see the branch head that contains this file (claude/pensive-noether-bhf0g8)",
+  "allowed_origins": [],
+  "example_context_ids": [],
+  "fixture_mode_example_context_ids": [
+    "ctx:alpha-loss",
+    "ctx:alpha-gain",
+    "ctx:beta-loss",
+    "ctx:gap"
+  ],
+  "checks_passed": [
+    "local: contracts/validate.py reproduces the handoff validation (40 schemas, 44 fixtures, 150 references, 16 quotes, 4 negative cases)",
+    "local HTTP: all 34 default fixture responses served verbatim and schema-valid in synthetic_fixture mode",
+    "local HTTP: shared 404/422/429/500/503 envelopes, readiness 503 on missing/invalid config or snapshot, liveness 200",
+    "local browser (headless Chromium): allowed origin reads success and error envelopes and X-Request-ID; disallowed origin blocked",
+    "local real mode on a SYNTHETIC package: every route payload schema-valid; pinned snapshot ID on every response",
+    "local PostgreSQL 16: migrations, read-only API role, immutable rows, idempotent publish, rollback with prior snapshot intact",
+    "local warm latency p95 ~2 ms (reports/latency_local.json); not Render, not cold start"
+  ],
+  "checks_not_run": [
+    "Render deployment, health check and cold start",
+    "Supabase project, custom-role grants and connection mode",
+    "real Lovable preview/published origins (CORS) and the browser journey (T23)",
+    "real source ingestion, OpenAI extraction/checking and human review of a real snapshot"
+  ],
+  "tested_error_cases": [
+    "404 NOT_FOUND",
+    "422 INVALID_REQUEST (blank, >200 chars, missing q, id >180)",
+    "429 RATE_LIMITED with Retry-After",
+    "500 INTERNAL_ERROR (opaque)",
+    "503 SNAPSHOT_UNAVAILABLE"
+  ],
+  "frontend_integration_now": "Run the API in ATLAS_DATA_MODE=synthetic_fixture (locally, or deployed once a Render service exists) and use VITE_ATLAS_API_BASE_URL=<host>/v1. Responses carry data_mode=synthetic_fixture and the SYNTHETIC_DATA warning; never present them as real research.",
+  "known_limitations": [
+    "No real reviewed snapshot: the judging journey cannot be shown on real data yet",
+    "External hosts (sources, OpenAI, Render, Supabase, Bright Data docs) were blocked from the build environment; API details were checked via search snippets only (docs/CONTRACT_NOTES.md item 15)",
+    "Rate limiting is per-process and in-memory; it is not distributed protection",
+    "Search is substring/prefix retrieval over published labels and aliases, capped at 20 matches"
+  ]
+}

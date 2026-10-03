@@ -1,0 +1,99 @@
+{
+  "contract_version": "1.0.0",
+  "snapshot_id": "snap_fixture_20261003",
+  "data_mode": "synthetic_fixture",
+  "data": {
+    "id": "calc:same-disease-subgroup",
+    "kind": "phenotype_weighted_jaccard",
+    "algorithm_version": "fixture-overlap-1",
+    "parameters": [
+      {
+        "name": "profile_level",
+        "value": "subgroup"
+      },
+      {
+        "name": "reference",
+        "value": "Synthetic equal weights; not the real HPO reference"
+      }
+    ],
+    "input_assertion_ids": [
+      "assert:alpha-loss-A",
+      "assert:alpha-loss-B"
+    ],
+    "input_evidence_ids": [
+      "evidence:assert:alpha-loss-A",
+      "evidence:assert:alpha-loss-B"
+    ],
+    "reference_sources": [],
+    "result": {
+      "mapped_annotation_ids": {
+        "a": [],
+        "b": []
+      },
+      "profile_level": "subgroup",
+      "score": null,
+      "calculation_id": "calc:same-disease-subgroup",
+      "same_parent_disease": true,
+      "direct_term_counts": {
+        "a": 2,
+        "b": 0
+      },
+      "publication_counts": {
+        "a": 2,
+        "b": 0
+      },
+      "reference_coverage": {
+        "a": {
+          "direct_terms": 2,
+          "assessed_terms": 2,
+          "fraction": 1.0,
+          "unassessed_term_ids": []
+        },
+        "b": {
+          "direct_terms": 0,
+          "assessed_terms": 0,
+          "fraction": null,
+          "unassessed_term_ids": []
+        }
+      },
+      "input_assertion_ids": {
+        "a": [
+          "assert:alpha-loss-A",
+          "assert:alpha-loss-B"
+        ],
+        "b": []
+      },
+      "shared_terms": [],
+      "specific_shared_term_ids": [],
+      "missingness": [
+        "Scoped phenotype evidence missing on at least one side."
+      ],
+      "warnings": [
+        {
+          "code": "SPARSE_PROFILE",
+          "message": "Illustrative overlap of two or fewer direct terms per side; not clinical confidence."
+        }
+      ]
+    },
+    "explanation": [
+      {
+        "text": "This calculation illustrates overlap of recorded fixture terms only.",
+        "assertion_ids": [],
+        "calculation_ids": [
+          "calc:same-disease-subgroup"
+        ],
+        "opportunity_ids": []
+      }
+    ],
+    "limitations": [
+      "Not clinical evidence.",
+      "No inference about unrecorded phenotypes."
+    ]
+  },
+  "warnings": [
+    {
+      "code": "SYNTHETIC_DATA",
+      "message": "Invented interface fixtures. Not scientific evidence."
+    }
+  ]
+}

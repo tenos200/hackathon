@@ -1,0 +1,92 @@
+{
+  "contract_version": "1.0.0",
+  "snapshot_id": "snap_fixture_20261003",
+  "data_mode": "synthetic_fixture",
+  "data": {
+    "id": "assert:beta-baseline-A",
+    "subject": {
+      "id": "TEST:DISEASE_BETA",
+      "label": "Synthetic Beta condition"
+    },
+    "predicate": "has_phenotype",
+    "object": {
+      "id": "TEST:PA",
+      "label": "Example feature A"
+    },
+    "context_id": null,
+    "scope_text": "Synthetic research context only. No patient applicability.",
+    "statement_status": "reported_result",
+    "effect_direction": "not_applicable",
+    "origin": "manual_import",
+    "review": {
+      "status": "accepted",
+      "description": "Fixture validation only; no scientific review has occurred.",
+      "expert_validation": false,
+      "reviewed_content_sha256": "9c795183ad3ced27e1f5498cea6b8215ca6ffd4b707970babf5089b4954c4de9"
+    },
+    "badges": [
+      {
+        "kind": "synthetic",
+        "label": "Synthetic fixture"
+      }
+    ],
+    "evidence": [
+      {
+        "id": "evidence:assert:beta-baseline-A",
+        "stance": "supports",
+        "kind": "text_spans",
+        "source": {
+          "id": "source:assert:beta-baseline-A",
+          "title": "Synthetic evidence for assert:beta-baseline-A",
+          "url": "https://example.org/atlas-fixture",
+          "external_ref": "SYNTHETIC:assert:beta-baseline-A",
+          "source_kind": "literature",
+          "release_or_version": "fixture-1",
+          "publication_status": "unknown",
+          "canonical_sha256": "c49646ccd7e4e711342e4e2e7a9afffb47b05908dd054ae5a56d69da296cb63e",
+          "raw_sha256": "c49646ccd7e4e711342e4e2e7a9afffb47b05908dd054ae5a56d69da296cb63e",
+          "canonicalizer_version": "synthetic-1",
+          "public_text_policy": "full",
+          "metadata": {
+            "server": null,
+            "doi": null,
+            "manuscript_version": null,
+            "license": "Invented fixture text",
+            "published_doi": null,
+            "publication_family_id": "family:assert:beta-baseline-A",
+            "fetch_backend": "fixture",
+            "original_target_url": "https://example.org/atlas-fixture"
+          }
+        },
+        "context": {
+          "text": "🧪 SYNTHETIC FIXTURE. The fictional beta disease baseline includes Example feature A. This fabricated paragraph exists only to test the interface; it supports no real biological conclusion.",
+          "canonical_start": 0,
+          "canonical_end": 188,
+          "highlights": [
+            {
+              "start": 21,
+              "end": 84,
+              "quote": "The fictional beta disease baseline includes Example feature A."
+            }
+          ]
+        },
+        "record_locator": null,
+        "study_or_cohort_ids": [],
+        "independence": "unknown",
+        "record_fields": [],
+        "study_design": "synthetic UI example",
+        "species": null,
+        "patient_count": null,
+        "source_native_validity": null,
+        "scope_text": "Invented example only."
+      }
+    ],
+    "conflicts": []
+  },
+  "warnings": [
+    {
+      "code": "SYNTHETIC_DATA",
+      "message": "Invented interface fixtures. Not scientific evidence."
+    }
+  ]
+}

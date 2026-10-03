@@ -1,0 +1,7 @@
+{
+  "_comment": "Human-set release metadata. published_at is part of the content hash, so set it once per intended release.",
+  "published_at": null,
+  "title": null,
+  "limitations": [],
+  "example_context_ids": []
+}

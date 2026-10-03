@@ -1,0 +1,92 @@
+{
+  "contract_version": "1.0.0",
+  "snapshot_id": "snap_fixture_20261003",
+  "data_mode": "synthetic_fixture",
+  "data": {
+    "id": "ctx:beta-loss",
+    "label": "Synthetic beta-loss research context",
+    "profile_level": "subgroup",
+    "gene_ids": [
+      "TEST:GENE_BETA"
+    ],
+    "disease": {
+      "id": "TEST:DISEASE_BETA",
+      "label": "Synthetic Beta condition"
+    },
+    "mechanism": {
+      "id": "mech:beta-loss",
+      "label": "Synthetic loss mechanism",
+      "effect": "loss"
+    },
+    "scope_text": "Fabricated fixture population; do not interpret clinically.",
+    "definition_assertion_ids": [
+      "assert:beta-loss-mechanism"
+    ],
+    "summary": [
+      {
+        "text": "This is a synthetic mechanism example.",
+        "assertion_ids": [
+          "assert:beta-loss-mechanism"
+        ],
+        "calculation_ids": [],
+        "opportunity_ids": []
+      }
+    ],
+    "disease_profile": {
+      "mapped_annotation_ids": [],
+      "terms": [
+        {
+          "id": "TEST:PA",
+          "label": "Example feature A",
+          "assertion_ids": [
+            "assert:beta-baseline-A"
+          ]
+        },
+        {
+          "id": "TEST:PC",
+          "label": "Example feature C",
+          "assertion_ids": [
+            "assert:beta-baseline-C"
+          ]
+        }
+      ],
+      "direct_term_count": 2,
+      "distinct_publication_count": 2,
+      "reference_assessed_count": 2,
+      "unassessed_term_ids": []
+    },
+    "subgroup_profile": {
+      "mapped_annotation_ids": [],
+      "terms": [
+        {
+          "id": "TEST:PA",
+          "label": "Example feature A",
+          "assertion_ids": [
+            "assert:beta-loss-A"
+          ]
+        },
+        {
+          "id": "TEST:PC",
+          "label": "Example feature C",
+          "assertion_ids": [
+            "assert:beta-loss-C"
+          ]
+        }
+      ],
+      "direct_term_count": 2,
+      "distinct_publication_count": 2,
+      "reference_assessed_count": 2,
+      "unassessed_term_ids": []
+    },
+    "limitations": [
+      "Synthetic data only.",
+      "Only two illustrative directly documented terms; not a complete profile."
+    ]
+  },
+  "warnings": [
+    {
+      "code": "SYNTHETIC_DATA",
+      "message": "Invented interface fixtures. Not scientific evidence."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "contract_version": "1.0.0",
+  "snapshot_id": "snap_fixture_20261003",
+  "data_mode": "synthetic_fixture",
+  "data": {
+    "context_id": "ctx:alpha-gain",
+    "exact_disease_assets": [
+      {
+        "id": "asset:alpha",
+        "name": "Synthetic alpha questionnaire",
+        "kind": "questionnaire",
+        "owner": {
+          "id": "org:alpha",
+          "label": "Synthetic alpha organization"
+        },
+        "url": "https://example.org/atlas-fixture/alpha",
+        "description": [
+          {
+            "text": "A fictional resource for demonstrating the evidence drawer.",
+            "assertion_ids": [
+              "assert:alpha-asset-owner"
+            ],
+            "calculation_ids": [],
+            "opportunity_ids": []
+          }
+        ],
+        "assertion_ids": [
+          "assert:alpha-asset-owner"
+        ],
+        "access_status": "contact_owner",
+        "access_terms": null
+      }
+    ],
+    "opportunities": [],
+    "gaps": []
+  },
+  "warnings": [
+    {
+      "code": "SYNTHETIC_DATA",
+      "message": "Invented interface fixtures. Not scientific evidence."
+    }
+  ]
+}

@@ -1,0 +1,1109 @@
+{
+  "components": {
+    "schemas": {
+      "AliasView": {
+        "additionalProperties": false,
+        "properties": {
+          "alias_type": {
+            "title": "Alias Type",
+            "type": "string"
+          },
+          "text": {
+            "title": "Text",
+            "type": "string"
+          }
+        },
+        "required": [
+          "text",
+          "alias_type"
+        ],
+        "title": "AliasView",
+        "type": "object"
+      },
+      "Cluster": {
+        "additionalProperties": false,
+        "properties": {
+          "assertion_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Assertion Ids",
+            "type": "array"
+          },
+          "basis": {
+            "enum": [
+              "functional_effect",
+              "shared_gene",
+              "phenotype_neighborhood"
+            ],
+            "title": "Basis",
+            "type": "string"
+          },
+          "calculation_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Calculation Ids",
+            "type": "array"
+          },
+          "explanation": {
+            "title": "Explanation",
+            "type": "string"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "label": {
+            "title": "Label",
+            "type": "string"
+          },
+          "members": {
+            "items": {
+              "$ref": "#/components/schemas/ContextOption"
+            },
+            "title": "Members",
+            "type": "array"
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "basis",
+          "members",
+          "assertion_ids",
+          "calculation_ids",
+          "explanation"
+        ],
+        "title": "Cluster",
+        "type": "object"
+      },
+      "ClustersData": {
+        "additionalProperties": false,
+        "properties": {
+          "clusters": {
+            "items": {
+              "$ref": "#/components/schemas/Cluster"
+            },
+            "title": "Clusters",
+            "type": "array"
+          },
+          "limitations": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Limitations",
+            "type": "array"
+          },
+          "method": {
+            "title": "Method",
+            "type": "string"
+          },
+          "unclustered": {
+            "items": {
+              "$ref": "#/components/schemas/ContextOption"
+            },
+            "title": "Unclustered",
+            "type": "array"
+          }
+        },
+        "required": [
+          "method",
+          "clusters",
+          "unclustered",
+          "limitations"
+        ],
+        "title": "ClustersData",
+        "type": "object"
+      },
+      "ClustersResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "contract_version": {
+            "const": "1.0.0",
+            "title": "Contract Version",
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/ClustersData"
+          },
+          "data_mode": {
+            "enum": [
+              "real",
+              "synthetic_fixture"
+            ],
+            "title": "Data Mode",
+            "type": "string"
+          },
+          "snapshot_id": {
+            "title": "Snapshot Id",
+            "type": "string"
+          },
+          "warnings": {
+            "items": {
+              "$ref": "#/components/schemas/Warning"
+            },
+            "title": "Warnings",
+            "type": "array"
+          }
+        },
+        "required": [
+          "contract_version",
+          "snapshot_id",
+          "data_mode",
+          "warnings",
+          "data"
+        ],
+        "title": "ClustersResponse",
+        "type": "object"
+      },
+      "ContextOption": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "label": {
+            "title": "Label",
+            "type": "string"
+          },
+          "mechanism_known": {
+            "title": "Mechanism Known",
+            "type": "boolean"
+          },
+          "profile_level": {
+            "enum": [
+              "disease",
+              "subgroup"
+            ],
+            "title": "Profile Level",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "profile_level",
+          "mechanism_known"
+        ],
+        "title": "ContextOption",
+        "type": "object"
+      },
+      "EntityAssertionRef": {
+        "additionalProperties": false,
+        "properties": {
+          "assertion_id": {
+            "title": "Assertion Id",
+            "type": "string"
+          },
+          "context_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Context Id"
+          },
+          "direction": {
+            "enum": [
+              "outgoing",
+              "incoming"
+            ],
+            "title": "Direction",
+            "type": "string"
+          },
+          "other": {
+            "$ref": "#/components/schemas/EntityRef"
+          },
+          "other_type": {
+            "enum": [
+              "gene",
+              "disease",
+              "variant",
+              "mechanism",
+              "phenotype",
+              "process",
+              "organization",
+              "asset",
+              "study",
+              "person"
+            ],
+            "title": "Other Type",
+            "type": "string"
+          },
+          "predicate": {
+            "title": "Predicate",
+            "type": "string"
+          },
+          "statement_status": {
+            "title": "Statement Status",
+            "type": "string"
+          }
+        },
+        "required": [
+          "assertion_id",
+          "predicate",
+          "direction",
+          "other",
+          "other_type",
+          "statement_status",
+          "context_id"
+        ],
+        "title": "EntityAssertionRef",
+        "type": "object"
+      },
+      "EntityData": {
+        "additionalProperties": false,
+        "properties": {
+          "aliases": {
+            "items": {
+              "$ref": "#/components/schemas/AliasView"
+            },
+            "title": "Aliases",
+            "type": "array"
+          },
+          "assertion_count": {
+            "title": "Assertion Count",
+            "type": "integer"
+          },
+          "assertions": {
+            "items": {
+              "$ref": "#/components/schemas/EntityAssertionRef"
+            },
+            "title": "Assertions",
+            "type": "array"
+          },
+          "contexts": {
+            "items": {
+              "$ref": "#/components/schemas/ContextOption"
+            },
+            "title": "Contexts",
+            "type": "array"
+          },
+          "entity_type": {
+            "enum": [
+              "gene",
+              "disease",
+              "variant",
+              "mechanism",
+              "phenotype",
+              "process",
+              "organization",
+              "asset",
+              "study",
+              "person"
+            ],
+            "title": "Entity Type",
+            "type": "string"
+          },
+          "external_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "External Ids",
+            "type": "array"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "label": {
+            "title": "Label",
+            "type": "string"
+          },
+          "properties": {
+            "items": {
+              "$ref": "#/components/schemas/FieldView"
+            },
+            "title": "Properties",
+            "type": "array"
+          }
+        },
+        "required": [
+          "id",
+          "entity_type",
+          "label",
+          "aliases",
+          "external_ids",
+          "properties",
+          "contexts",
+          "assertions",
+          "assertion_count"
+        ],
+        "title": "EntityData",
+        "type": "object"
+      },
+      "EntityRef": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "label": {
+            "title": "Label",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "label"
+        ],
+        "title": "EntityRef",
+        "type": "object"
+      },
+      "EntityResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "contract_version": {
+            "const": "1.0.0",
+            "title": "Contract Version",
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/EntityData"
+          },
+          "data_mode": {
+            "enum": [
+              "real",
+              "synthetic_fixture"
+            ],
+            "title": "Data Mode",
+            "type": "string"
+          },
+          "snapshot_id": {
+            "title": "Snapshot Id",
+            "type": "string"
+          },
+          "warnings": {
+            "items": {
+              "$ref": "#/components/schemas/Warning"
+            },
+            "title": "Warnings",
+            "type": "array"
+          }
+        },
+        "required": [
+          "contract_version",
+          "snapshot_id",
+          "data_mode",
+          "warnings",
+          "data"
+        ],
+        "title": "EntityResponse",
+        "type": "object"
+      },
+      "FieldView": {
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "value": {
+            "title": "Value",
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "value"
+        ],
+        "title": "FieldView",
+        "type": "object"
+      },
+      "GraphData": {
+        "additionalProperties": false,
+        "properties": {
+          "depth": {
+            "title": "Depth",
+            "type": "integer"
+          },
+          "focus": {
+            "title": "Focus",
+            "type": "string"
+          },
+          "legend": {
+            "items": {
+              "$ref": "#/components/schemas/FieldView"
+            },
+            "title": "Legend",
+            "type": "array"
+          },
+          "links": {
+            "items": {
+              "$ref": "#/components/schemas/GraphLinkExt"
+            },
+            "title": "Links",
+            "type": "array"
+          },
+          "nodes": {
+            "items": {
+              "$ref": "#/components/schemas/GraphNodeExt"
+            },
+            "title": "Nodes",
+            "type": "array"
+          },
+          "truncated": {
+            "title": "Truncated",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "focus",
+          "depth",
+          "nodes",
+          "links",
+          "truncated",
+          "legend"
+        ],
+        "title": "GraphData",
+        "type": "object"
+      },
+      "GraphLinkExt": {
+        "additionalProperties": false,
+        "properties": {
+          "assertion_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Assertion Id"
+          },
+          "calculation_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Calculation Id"
+          },
+          "computed": {
+            "title": "Computed",
+            "type": "boolean"
+          },
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "relation": {
+            "title": "Relation",
+            "type": "string"
+          },
+          "source": {
+            "title": "Source",
+            "type": "string"
+          },
+          "statement_status": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Statement Status"
+          },
+          "target": {
+            "title": "Target",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "source",
+          "target",
+          "relation",
+          "assertion_id",
+          "calculation_id",
+          "computed",
+          "statement_status"
+        ],
+        "title": "GraphLinkExt",
+        "type": "object"
+      },
+      "GraphNodeExt": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "is_focus": {
+            "title": "Is Focus",
+            "type": "boolean"
+          },
+          "label": {
+            "title": "Label",
+            "type": "string"
+          },
+          "type": {
+            "title": "Type",
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "type",
+          "is_focus"
+        ],
+        "title": "GraphNodeExt",
+        "type": "object"
+      },
+      "GraphResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "contract_version": {
+            "const": "1.0.0",
+            "title": "Contract Version",
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/GraphData"
+          },
+          "data_mode": {
+            "enum": [
+              "real",
+              "synthetic_fixture"
+            ],
+            "title": "Data Mode",
+            "type": "string"
+          },
+          "snapshot_id": {
+            "title": "Snapshot Id",
+            "type": "string"
+          },
+          "warnings": {
+            "items": {
+              "$ref": "#/components/schemas/Warning"
+            },
+            "title": "Warnings",
+            "type": "array"
+          }
+        },
+        "required": [
+          "contract_version",
+          "snapshot_id",
+          "data_mode",
+          "warnings",
+          "data"
+        ],
+        "title": "GraphResponse",
+        "type": "object"
+      },
+      "NetworkData": {
+        "additionalProperties": false,
+        "properties": {
+          "community": {
+            "items": {
+              "$ref": "#/components/schemas/SharedConnection"
+            },
+            "title": "Community",
+            "type": "array"
+          },
+          "context_id": {
+            "title": "Context Id",
+            "type": "string"
+          },
+          "limitations": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Limitations",
+            "type": "array"
+          },
+          "overlaps": {
+            "items": {
+              "$ref": "#/components/schemas/OverlapItem"
+            },
+            "title": "Overlaps",
+            "type": "array"
+          }
+        },
+        "required": [
+          "context_id",
+          "community",
+          "overlaps",
+          "limitations"
+        ],
+        "title": "NetworkData",
+        "type": "object"
+      },
+      "NetworkResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "contract_version": {
+            "const": "1.0.0",
+            "title": "Contract Version",
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/NetworkData"
+          },
+          "data_mode": {
+            "enum": [
+              "real",
+              "synthetic_fixture"
+            ],
+            "title": "Data Mode",
+            "type": "string"
+          },
+          "snapshot_id": {
+            "title": "Snapshot Id",
+            "type": "string"
+          },
+          "warnings": {
+            "items": {
+              "$ref": "#/components/schemas/Warning"
+            },
+            "title": "Warnings",
+            "type": "array"
+          }
+        },
+        "required": [
+          "contract_version",
+          "snapshot_id",
+          "data_mode",
+          "warnings",
+          "data"
+        ],
+        "title": "NetworkResponse",
+        "type": "object"
+      },
+      "OverlapItem": {
+        "additionalProperties": false,
+        "properties": {
+          "other_context": {
+            "$ref": "#/components/schemas/ContextOption"
+          },
+          "shared": {
+            "items": {
+              "$ref": "#/components/schemas/SharedConnection"
+            },
+            "title": "Shared",
+            "type": "array"
+          }
+        },
+        "required": [
+          "other_context",
+          "shared"
+        ],
+        "title": "OverlapItem",
+        "type": "object"
+      },
+      "SharedConnection": {
+        "additionalProperties": false,
+        "properties": {
+          "assertion_ids_a": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Assertion Ids A",
+            "type": "array"
+          },
+          "assertion_ids_b": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Assertion Ids B",
+            "type": "array"
+          },
+          "entity": {
+            "$ref": "#/components/schemas/EntityRef"
+          },
+          "entity_type": {
+            "enum": [
+              "gene",
+              "disease",
+              "variant",
+              "mechanism",
+              "phenotype",
+              "process",
+              "organization",
+              "asset",
+              "study",
+              "person"
+            ],
+            "title": "Entity Type",
+            "type": "string"
+          },
+          "role": {
+            "title": "Role",
+            "type": "string"
+          }
+        },
+        "required": [
+          "entity",
+          "entity_type",
+          "role",
+          "assertion_ids_a",
+          "assertion_ids_b"
+        ],
+        "title": "SharedConnection",
+        "type": "object"
+      },
+      "Warning": {
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "title": "Code",
+            "type": "string"
+          },
+          "message": {
+            "title": "Message",
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "message"
+        ],
+        "title": "Warning",
+        "type": "object"
+      }
+    }
+  },
+  "info": {
+    "description": "Additive to contract 1.0.0 (unchanged). Same envelope, errors, bounds and CORS. Proposal: contracts/extension-1.1.0/PROPOSAL.md.",
+    "title": "Rare Disease Atlas public read API: proposed additive extension",
+    "version": "1.1.0-proposed"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/v1/clusters": {
+      "get": {
+        "operationId": "getClusters",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ClustersResponse"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://atlas.invalid/contracts/openapi.json#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Shared 1.0.0 error envelope"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://atlas.invalid/contracts/openapi.json#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Shared 1.0.0 error envelope"
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://atlas.invalid/contracts/openapi.json#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Shared 1.0.0 error envelope"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://atlas.invalid/contracts/openapi.json#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Shared 1.0.0 error envelope"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://atlas.invalid/contracts/openapi.json#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Shared 1.0.0 error envelope"
+          }
+        },
+        "summary": "Explainable cluster facets"
+      }
+    },
+    "/v1/contexts/{id}/network": {
+      "get": {
+        "operationId": "getNetwork",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "maxLength": 180,
+              "minLength": 1,
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NetworkResponse"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://atlas.invalid/contracts/openapi.json#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Shared 1.0.0 error envelope"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://atlas.invalid/contracts/openapi.json#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Shared 1.0.0 error envelope"
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://atlas.invalid/contracts/openapi.json#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Shared 1.0.0 error envelope"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://atlas.invalid/contracts/openapi.json#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Shared 1.0.0 error envelope"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://atlas.invalid/contracts/openapi.json#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Shared 1.0.0 error envelope"
+          }
+        },
+        "summary": "Community and researcher overlap"
+      }
+    },
+    "/v1/entities/{id}": {
+      "get": {
+        "operationId": "getEntity",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "maxLength": 180,
+              "minLength": 1,
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EntityResponse"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://atlas.invalid/contracts/openapi.json#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Shared 1.0.0 error envelope"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://atlas.invalid/contracts/openapi.json#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Shared 1.0.0 error envelope"
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://atlas.invalid/contracts/openapi.json#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Shared 1.0.0 error envelope"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://atlas.invalid/contracts/openapi.json#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Shared 1.0.0 error envelope"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://atlas.invalid/contracts/openapi.json#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Shared 1.0.0 error envelope"
+          }
+        },
+        "summary": "Any published entity with its assertions"
+      }
+    },
+    "/v1/graph": {
+      "get": {
+        "operationId": "getGraph",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "focus",
+            "required": true,
+            "schema": {
+              "maxLength": 180,
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "depth",
+            "required": false,
+            "schema": {
+              "default": 1,
+              "enum": [
+                1,
+                2
+              ],
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GraphResponse"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://atlas.invalid/contracts/openapi.json#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Shared 1.0.0 error envelope"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://atlas.invalid/contracts/openapi.json#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Shared 1.0.0 error envelope"
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://atlas.invalid/contracts/openapi.json#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Shared 1.0.0 error envelope"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://atlas.invalid/contracts/openapi.json#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Shared 1.0.0 error envelope"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "https://atlas.invalid/contracts/openapi.json#/components/schemas/ErrorEnvelope"
+                }
+              }
+            },
+            "description": "Shared 1.0.0 error envelope"
+          }
+        },
+        "summary": "Bounded knowledge-graph neighborhood (60 nodes / 100 links)"
+      }
+    }
+  }
+}

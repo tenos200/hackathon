@@ -1,0 +1,92 @@
+{
+  "contract_version": "1.0.0",
+  "snapshot_id": "snap_fixture_20261003",
+  "data_mode": "synthetic_fixture",
+  "data": {
+    "id": "assert:beta-loss-C",
+    "subject": {
+      "id": "TEST:DISEASE_BETA",
+      "label": "Synthetic Beta condition"
+    },
+    "predicate": "has_phenotype",
+    "object": {
+      "id": "TEST:PC",
+      "label": "Example feature C"
+    },
+    "context_id": "ctx:beta-loss",
+    "scope_text": "Synthetic research context only. No patient applicability.",
+    "statement_status": "reported_result",
+    "effect_direction": "not_applicable",
+    "origin": "manual_import",
+    "review": {
+      "status": "accepted",
+      "description": "Fixture validation only; no scientific review has occurred.",
+      "expert_validation": false,
+      "reviewed_content_sha256": "0142b63effe6be7c2c24313cad1f4c9f74facff4ef5f790b19b2b03ddca2402d"
+    },
+    "badges": [
+      {
+        "kind": "synthetic",
+        "label": "Synthetic fixture"
+      }
+    ],
+    "evidence": [
+      {
+        "id": "evidence:assert:beta-loss-C",
+        "stance": "supports",
+        "kind": "text_spans",
+        "source": {
+          "id": "source:assert:beta-loss-C",
+          "title": "Synthetic evidence for assert:beta-loss-C",
+          "url": "https://example.org/atlas-fixture",
+          "external_ref": "SYNTHETIC:assert:beta-loss-C",
+          "source_kind": "literature",
+          "release_or_version": "fixture-1",
+          "publication_status": "unknown",
+          "canonical_sha256": "85fc5e7e32a63930b91bc238e611d71eeffebb4c7d87716fb5fbaa71d96347dd",
+          "raw_sha256": "85fc5e7e32a63930b91bc238e611d71eeffebb4c7d87716fb5fbaa71d96347dd",
+          "canonicalizer_version": "synthetic-1",
+          "public_text_policy": "full",
+          "metadata": {
+            "server": null,
+            "doi": null,
+            "manuscript_version": null,
+            "license": "Invented fixture text",
+            "published_doi": null,
+            "publication_family_id": "family:assert:beta-loss-C",
+            "fetch_backend": "fixture",
+            "original_target_url": "https://example.org/atlas-fixture"
+          }
+        },
+        "context": {
+          "text": "🧪 SYNTHETIC FIXTURE. The fictional beta-loss subgroup includes Example feature C. This fabricated paragraph exists only to test the interface; it supports no real biological conclusion.",
+          "canonical_start": 0,
+          "canonical_end": 185,
+          "highlights": [
+            {
+              "start": 21,
+              "end": 81,
+              "quote": "The fictional beta-loss subgroup includes Example feature C."
+            }
+          ]
+        },
+        "record_locator": null,
+        "study_or_cohort_ids": [],
+        "independence": "unknown",
+        "record_fields": [],
+        "study_design": "synthetic UI example",
+        "species": null,
+        "patient_count": null,
+        "source_native_validity": null,
+        "scope_text": "Invented example only."
+      }
+    ],
+    "conflicts": []
+  },
+  "warnings": [
+    {
+      "code": "SYNTHETIC_DATA",
+      "message": "Invented interface fixtures. Not scientific evidence."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+# curie_map:
+#   MONDO: http://purl.obolibrary.org/obo/MONDO_
+# mapping_set_id: synthetic-test-fixture
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification
+MONDO:9900001	synthetic disorder A	skos:exactMatch	OMIM:900001	Synthetic disorder A	semapv:ManualMappingCuration
+MONDO:9900001	synthetic disorder A	skos:exactMatch	Orphanet:90001	Synthetic disorder A	semapv:ManualMappingCuration
+MONDO:9900001	synthetic disorder A	skos:exactMatch	DECIPHER:901	Synthetic disorder A	semapv:ManualMappingCuration
+MONDO:9900002	synthetic disorder B	skos:exactMatch	OMIM:900002	Synthetic disorder B	semapv:ManualMappingCuration
+MONDO:9900002	synthetic disorder B	skos:relatedMatch	OMIM:900006	Synthetic reference 6	semapv:ManualMappingCuration
+MONDO:9900003	synthetic disorder C grouping	skos:broadMatch	OMIM:900003	Synthetic disorder C	semapv:ManualMappingCuration
+MONDO:9900003	synthetic disorder C grouping	skos:closeMatch	Orphanet:90003	Synthetic disorder C	semapv:ManualMappingCuration
+MONDO:9900004	synthetic disorder D	skos:exactMatch	ORPHA:90004	Synthetic disorder D	semapv:ManualMappingCuration
+MONDO:9900005	synthetic disorder E	skos:exactMatch	MIM:900011	Synthetic disorder E	semapv:ManualMappingCuration
+MONDO:9900061	synthetic disorder type 6A	skos:exactMatch	OMIM:900004	Synthetic reference 4	semapv:ManualMappingCuration
+MONDO:9900062	synthetic disorder type 6B	skos:exactMatch	OMIM:900005	Synthetic reference 5	semapv:ManualMappingCuration
