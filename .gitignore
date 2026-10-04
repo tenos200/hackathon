@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+.env.*
+!.env.example
+# Private pipeline workspace: raw caches, model responses, private full text, packages.
+work/
+# Review decisions and deliberations are private by default.
+review/*
+!review/README.md
+reports/*.tmp
