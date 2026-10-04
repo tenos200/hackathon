@@ -1,4 +1,0 @@
-{
-  "_comment": "Only these exact pages may be fetched (direct or brightdata). Add pages after manual review. expect_text is a string that must appear on the real target page; without it, error/consent pages cannot be detected.",
-  "pages": []
-}

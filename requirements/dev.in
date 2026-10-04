@@ -1,3 +1,0 @@
--r pipeline.in
-pytest==9.1.1
-openapi-spec-validator==0.9.0
