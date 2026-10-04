@@ -1,0 +1,143 @@
+annotated-doc==0.0.5
+    # via fastapi
+annotated-types==0.8.0
+    # via pydantic
+anyio==4.15.1
+    # via
+    #   httpx
+    #   httpx2
+    #   openai
+    #   starlette
+attrs==26.1.0
+    # via
+    #   jsonschema
+    #   jsonschema-path
+    #   referencing
+certifi==2026.7.22
+    # via
+    #   httpcore
+    #   httpx
+click==8.5.0
+    # via uvicorn
+fastapi==0.142.2
+    # via -r requirements/api.in
+h11==0.16.0
+    # via
+    #   httpcore
+    #   httpcore2
+    #   uvicorn
+httpcore==1.0.9
+    # via httpx
+httpcore2==2.13.1
+    # via httpx2
+httpx==0.28.1
+    # via -r requirements/pipeline.in
+httpx2==2.13.1
+    # via openai
+idna==3.20
+    # via
+    #   anyio
+    #   httpx
+    #   httpx2
+iniconfig==2.3.0
+    # via pytest
+jiter==0.17.0
+    # via openai
+jsonschema==4.26.0
+    # via
+    #   -r requirements/api.in
+    #   openapi-schema-validator
+    #   openapi-spec-validator
+jsonschema-path==0.5.0
+    # via openapi-spec-validator
+jsonschema-specifications==2025.9.1
+    # via
+    #   jsonschema
+    #   openapi-schema-validator
+lazy-object-proxy==1.12.0
+    # via openapi-spec-validator
+openai==3.24.0
+    # via -r requirements/pipeline.in
+openapi-schema-validator==0.9.0
+    # via openapi-spec-validator
+openapi-spec-validator==0.9.0
+    # via -r requirements/dev.in
+opentelemetry-api==1.45.0
+    # via fastapi
+packaging==26.3
+    # via pytest
+pathable==0.6.0
+    # via jsonschema-path
+pluggy==1.6.0
+    # via pytest
+psycopg==3.3.6
+    # via -r requirements/api.in
+psycopg-binary==3.3.6
+    # via psycopg
+psycopg-pool==3.3.3
+    # via -r requirements/api.in
+pydantic==2.13.5
+    # via
+    #   -r requirements/api.in
+    #   fastapi
+    #   openai
+    #   openapi-schema-validator
+    #   openapi-spec-validator
+    #   pydantic-settings
+pydantic-core==2.46.5
+    # via pydantic
+pydantic-settings==2.15.0
+    # via
+    #   openapi-schema-validator
+    #   openapi-spec-validator
+pygments==2.21.0
+    # via pytest
+pytest==9.1.1
+    # via -r requirements/dev.in
+python-dotenv==1.2.4
+    # via pydantic-settings
+pyyaml==6.0.3
+    # via jsonschema-path
+referencing==0.37.0
+    # via
+    #   jsonschema
+    #   jsonschema-path
+    #   jsonschema-specifications
+    #   openapi-schema-validator
+rfc3339-validator==0.1.4
+    # via openapi-schema-validator
+rpds-py==2026.6.3
+    # via
+    #   jsonschema
+    #   referencing
+six==1.17.0
+    # via rfc3339-validator
+sniffio==1.3.1
+    # via openai
+starlette==1.7.0
+    # via fastapi
+truststore==0.10.4
+    # via
+    #   httpcore2
+    #   httpx2
+typing-extensions==4.16.0
+    # via
+    #   anyio
+    #   fastapi
+    #   httpx2
+    #   openai
+    #   opentelemetry-api
+    #   psycopg
+    #   psycopg-pool
+    #   pydantic
+    #   pydantic-core
+    #   referencing
+    #   starlette
+    #   typing-inspection
+typing-inspection==0.4.4
+    # via
+    #   fastapi
+    #   pydantic
+    #   pydantic-settings
+uvicorn==0.54.0
+    # via -r requirements/api.in

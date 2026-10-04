@@ -1,0 +1,92 @@
+{
+  "contract_version": "1.0.0",
+  "snapshot_id": "snap_fixture_20261003",
+  "data_mode": "synthetic_fixture",
+  "data": {
+    "id": "assert:alpha-gain-mechanism",
+    "subject": {
+      "id": "TEST:DISEASE_ALPHA",
+      "label": "Synthetic Alpha condition"
+    },
+    "predicate": "disease_has_mechanism",
+    "object": {
+      "id": "mech:alpha-gain",
+      "label": "Synthetic gain mechanism"
+    },
+    "context_id": "ctx:alpha-gain",
+    "scope_text": "Synthetic research context only. No patient applicability.",
+    "statement_status": "reported_result",
+    "effect_direction": "not_applicable",
+    "origin": "manual_import",
+    "review": {
+      "status": "accepted",
+      "description": "Fixture validation only; no scientific review has occurred.",
+      "expert_validation": false,
+      "reviewed_content_sha256": "ac4f1de79a1797c2a629ce715aa15bdead855905e714d816b3ddba748882fe30"
+    },
+    "badges": [
+      {
+        "kind": "synthetic",
+        "label": "Synthetic fixture"
+      }
+    ],
+    "evidence": [
+      {
+        "id": "evidence:assert:alpha-gain-mechanism",
+        "stance": "supports",
+        "kind": "text_spans",
+        "source": {
+          "id": "source:assert:alpha-gain-mechanism",
+          "title": "Synthetic evidence for assert:alpha-gain-mechanism",
+          "url": "https://example.org/atlas-fixture",
+          "external_ref": "SYNTHETIC:assert:alpha-gain-mechanism",
+          "source_kind": "literature",
+          "release_or_version": "fixture-1",
+          "publication_status": "unknown",
+          "canonical_sha256": "a69b8373e10ba352c9808396e3111a78cacf3eb89a1b0f70b39fc0437b9cd866",
+          "raw_sha256": "a69b8373e10ba352c9808396e3111a78cacf3eb89a1b0f70b39fc0437b9cd866",
+          "canonicalizer_version": "synthetic-1",
+          "public_text_policy": "full",
+          "metadata": {
+            "server": null,
+            "doi": null,
+            "manuscript_version": null,
+            "license": "Invented fixture text",
+            "published_doi": null,
+            "publication_family_id": "family:assert:alpha-gain-mechanism",
+            "fetch_backend": "fixture",
+            "original_target_url": "https://example.org/atlas-fixture"
+          }
+        },
+        "context": {
+          "text": "🧪 SYNTHETIC FIXTURE. The fictional alpha-gain group has the illustrative gain mechanism. This fabricated paragraph exists only to test the interface; it supports no real biological conclusion.",
+          "canonical_start": 0,
+          "canonical_end": 192,
+          "highlights": [
+            {
+              "start": 21,
+              "end": 88,
+              "quote": "The fictional alpha-gain group has the illustrative gain mechanism."
+            }
+          ]
+        },
+        "record_locator": null,
+        "study_or_cohort_ids": [],
+        "independence": "unknown",
+        "record_fields": [],
+        "study_design": "synthetic UI example",
+        "species": null,
+        "patient_count": null,
+        "source_native_validity": null,
+        "scope_text": "Invented example only."
+      }
+    ],
+    "conflicts": []
+  },
+  "warnings": [
+    {
+      "code": "SYNTHETIC_DATA",
+      "message": "Invented interface fixtures. Not scientific evidence."
+    }
+  ]
+}

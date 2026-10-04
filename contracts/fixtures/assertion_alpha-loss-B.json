@@ -1,0 +1,92 @@
+{
+  "contract_version": "1.0.0",
+  "snapshot_id": "snap_fixture_20261003",
+  "data_mode": "synthetic_fixture",
+  "data": {
+    "id": "assert:alpha-loss-B",
+    "subject": {
+      "id": "TEST:DISEASE_ALPHA",
+      "label": "Synthetic Alpha condition"
+    },
+    "predicate": "has_phenotype",
+    "object": {
+      "id": "TEST:PB",
+      "label": "Example feature B"
+    },
+    "context_id": "ctx:alpha-loss",
+    "scope_text": "Synthetic research context only. No patient applicability.",
+    "statement_status": "reported_result",
+    "effect_direction": "not_applicable",
+    "origin": "manual_import",
+    "review": {
+      "status": "accepted",
+      "description": "Fixture validation only; no scientific review has occurred.",
+      "expert_validation": false,
+      "reviewed_content_sha256": "5adbabc071ddea71a5819a7f8e57e68056302562ef0f78f39347fb30d80ff444"
+    },
+    "badges": [
+      {
+        "kind": "synthetic",
+        "label": "Synthetic fixture"
+      }
+    ],
+    "evidence": [
+      {
+        "id": "evidence:assert:alpha-loss-B",
+        "stance": "supports",
+        "kind": "text_spans",
+        "source": {
+          "id": "source:assert:alpha-loss-B",
+          "title": "Synthetic evidence for assert:alpha-loss-B",
+          "url": "https://example.org/atlas-fixture",
+          "external_ref": "SYNTHETIC:assert:alpha-loss-B",
+          "source_kind": "literature",
+          "release_or_version": "fixture-1",
+          "publication_status": "unknown",
+          "canonical_sha256": "be252c7a98a8c38c7b8d2c590dbe2b0ed0b916649b0eef222d1305e0094738d7",
+          "raw_sha256": "be252c7a98a8c38c7b8d2c590dbe2b0ed0b916649b0eef222d1305e0094738d7",
+          "canonicalizer_version": "synthetic-1",
+          "public_text_policy": "full",
+          "metadata": {
+            "server": null,
+            "doi": null,
+            "manuscript_version": null,
+            "license": "Invented fixture text",
+            "published_doi": null,
+            "publication_family_id": "family:assert:alpha-loss-B",
+            "fetch_backend": "fixture",
+            "original_target_url": "https://example.org/atlas-fixture"
+          }
+        },
+        "context": {
+          "text": "🧪 SYNTHETIC FIXTURE. The fictional alpha-loss subgroup includes Example feature B. This fabricated paragraph exists only to test the interface; it supports no real biological conclusion.",
+          "canonical_start": 0,
+          "canonical_end": 186,
+          "highlights": [
+            {
+              "start": 21,
+              "end": 82,
+              "quote": "The fictional alpha-loss subgroup includes Example feature B."
+            }
+          ]
+        },
+        "record_locator": null,
+        "study_or_cohort_ids": [],
+        "independence": "unknown",
+        "record_fields": [],
+        "study_design": "synthetic UI example",
+        "species": null,
+        "patient_count": null,
+        "source_native_validity": null,
+        "scope_text": "Invented example only."
+      }
+    ],
+    "conflicts": []
+  },
+  "warnings": [
+    {
+      "code": "SYNTHETIC_DATA",
+      "message": "Invented interface fixtures. Not scientific evidence."
+    }
+  ]
+}

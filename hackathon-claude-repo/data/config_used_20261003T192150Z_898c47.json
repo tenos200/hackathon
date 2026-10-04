@@ -1,0 +1,145 @@
+{
+  "contact_email": "",
+  "genes": [
+    "SCN1A",
+    "SCN2A",
+    "KCNQ2",
+    "STXBP1"
+  ],
+  "stretch_genes": [
+    "SCN8A",
+    "SNAP25",
+    "STX1B"
+  ],
+  "files": [
+    {
+      "name": "mondo_obo",
+      "dest": "mondo/mondo.obo",
+      "urls": [
+        "http://purl.obolibrary.org/obo/mondo.obo"
+      ]
+    },
+    {
+      "name": "mondo_sssom",
+      "dest": "mondo/mondo.sssom.tsv",
+      "urls": [
+        "http://purl.obolibrary.org/obo/mondo/mappings/mondo.sssom.tsv",
+        "https://data.monarchinitiative.org/mappings/latest/mondo.sssom.tsv"
+      ]
+    },
+    {
+      "name": "hpo_json",
+      "dest": "hpo/hp.json",
+      "urls": [
+        "http://purl.obolibrary.org/obo/hp.json"
+      ]
+    },
+    {
+      "name": "phenotype_hpoa",
+      "dest": "hpo/phenotype.hpoa",
+      "urls": [
+        "https://github.com/obophenotype/human-phenotype-ontology/releases/latest/download/phenotype.hpoa",
+        "http://purl.obolibrary.org/obo/hp/hpoa/phenotype.hpoa"
+      ]
+    },
+    {
+      "name": "gencc_submissions",
+      "dest": "gencc/gencc-submissions.csv",
+      "urls": [
+        "https://thegencc.org/download/action/submissions-export-csv?format=new"
+      ],
+      "note": "GenCC allows 20 downloads per IP per day; this is cached after the first success"
+    },
+    {
+      "name": "orphadata_genes",
+      "dest": "orphadata/en_product6.xml",
+      "urls": [
+        "https://www.orphadata.com/data/xml/en_product6.xml"
+      ]
+    },
+    {
+      "name": "orphadata_phenotypes",
+      "dest": "orphadata/en_product4.xml",
+      "urls": [
+        "https://www.orphadata.com/data/xml/en_product4.xml"
+      ]
+    },
+    {
+      "name": "go_human_gaf",
+      "dest": "go/goa_human.gaf.gz",
+      "urls": [
+        "https://current.geneontology.org/annotations/goa_human.gaf.gz"
+      ]
+    }
+  ],
+  "pubmed": {
+    "retmax_per_query": 10,
+    "query_templates": [
+      "{gene}[tiab] AND (\"loss of function\"[tiab] OR \"gain of function\"[tiab]) AND hasabstract AND english[lang]",
+      "{gene}[tiab] AND (phenotype[tiab] OR \"natural history\"[tiab] OR cohort[tiab]) AND hasabstract AND english[lang]",
+      "{gene}[tiab] AND (\"sodium channel blocker\"[tiab] OR \"sodium channel blockers\"[tiab] OR treatment[tiab]) AND hasabstract AND english[lang]"
+    ],
+    "extra_queries": [
+      "\"Dravet syndrome\"[tiab] AND \"natural history\"[tiab] AND hasabstract AND english[lang]"
+    ],
+    "extra_pmids": [],
+    "efetch_batch_size": 100
+  },
+  "clinvar": {
+    "variation_ids": []
+  },
+  "medrxiv": {
+    "dois": [],
+    "scrape_json_path": "medrxiv.json",
+    "filter_pattern": "SCN1A|SCN2A|KCNQ2|STXBP1|Dravet|SCN8A|SNAP25|STX1B",
+    "api_urls": [
+      "https://api.medrxiv.org/details/medrxiv/{doi}/na/json",
+      "https://api.biorxiv.org/details/medrxiv/{doi}/na/json"
+    ]
+  },
+  "ctgov": {
+    "page_size": 100,
+    "max_pages_per_query": 5,
+    "queries": [
+      {
+        "cond": "Dravet syndrome"
+      },
+      {
+        "term": "SCN1A"
+      },
+      {
+        "term": "SCN2A"
+      },
+      {
+        "term": "KCNQ2"
+      },
+      {
+        "term": "STXBP1"
+      }
+    ]
+  },
+  "reporter": {
+    "limit": 100,
+    "terms": [
+      "SCN1A",
+      "SCN2A",
+      "KCNQ2",
+      "STXBP1"
+    ],
+    "search_field": "projecttitle,abstracttext"
+  },
+  "orcid": {
+    "ids": []
+  },
+  "web": {
+    "respect_robots": true,
+    "pages": [
+      {
+        "label": "familiescn2a_research",
+        "url": "https://www.scn2a.org/research/clinical-trials-and-research-opportunities/",
+        "backend": "direct",
+        "data_format": null
+      }
+    ]
+  }
+}

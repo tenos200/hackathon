@@ -1,0 +1,19 @@
+{
+  "boundary": "local machine, warm requests, single client; NOT Render, NOT cold start",
+  "target": "p95 < 500 ms non-cold on the demo snapshot (master plan section 10)",
+  "synthetic_fixture_mode": {
+    "requests": 210,
+    "p50_ms": 1.66,
+    "p95_ms": 2.06,
+    "max_ms": 3.39,
+    "local_process_start_to_ready_s": 0.47
+  },
+  "real_mode_synthetic_package": {
+    "requests": 210,
+    "p50_ms": 1.73,
+    "p95_ms": 2.31,
+    "max_ms": 5.83,
+    "local_process_start_to_ready_s": 0.71
+  },
+  "measured_at": "2026-10-03T20:29:53Z"
+}

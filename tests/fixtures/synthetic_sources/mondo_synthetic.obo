@@ -1,0 +1,45 @@
+format-version: 1.2
+data-version: http://purl.obolibrary.org/obo/mondo/releases/synthetic-2026-10-01/mondo.owl
+remark: SYNTHETIC TEST FIXTURE - not the Mondo Disease Ontology
+
+[Term]
+id: MONDO:9900000
+name: synthetic developmental and epileptic disorder grouping
+
+[Term]
+id: MONDO:9900001
+name: synthetic disorder A
+synonym: "SYNTHA-related disorder" EXACT []
+synonym: "synthetic disorder" BROAD []
+is_a: MONDO:9900000
+
+[Term]
+id: MONDO:9900002
+name: synthetic disorder B
+synonym: "synthetic disorder" BROAD []
+is_a: MONDO:9900000
+
+[Term]
+id: MONDO:9900003
+name: synthetic disorder C grouping
+is_a: MONDO:9900000
+
+[Term]
+id: MONDO:9900004
+name: synthetic disorder D
+is_a: MONDO:9900000
+
+[Term]
+id: MONDO:9900005
+name: synthetic disorder E
+is_a: MONDO:9900000
+
+[Term]
+id: MONDO:9900061
+name: synthetic disorder type 6A
+is_a: MONDO:9900000
+
+[Term]
+id: MONDO:9900062
+name: synthetic disorder type 6B
+is_a: MONDO:9900000

@@ -1,0 +1,23 @@
+{
+ "responseHeader": {
+  "status": 0
+ },
+ "response": {
+  "numFound": 1,
+  "docs": [
+   {
+    "hgnc_id": "HGNC:900001",
+    "symbol": "SYNTHA",
+    "name": "synthetic channel A",
+    "alias_symbol": [
+     "SYNA1"
+    ],
+    "prev_symbol": [
+     "SYNTHAOLD"
+    ],
+    "date_modified": "2026-09-01",
+    "status": "Approved"
+   }
+  ]
+ }
+}

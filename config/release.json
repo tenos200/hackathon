@@ -1,0 +1,16 @@
+{
+  "_comment": "Human-set release metadata. published_at is part of the content hash, so set it once per intended release.",
+  "published_at": "2026-10-04T00:00:00Z",
+  "title": "Rare Disease Atlas: ion-channel neurodevelopmental disorders (hackathon release)",
+  "limitations": [
+    "All records were accepted in one blanket decision by the project owner (a-pihlgren) on 2026-10-04 without per-record inspection; structural checks still applied. This is not expert or scientific validation.",
+    "Built only from structured sources (GenCC, Orphanet, HPO annotations, Mondo, NIH RePORTER, ClinicalTrials.gov). No claims were extracted from literature text in this release.",
+    "Most contexts are disease-level with mechanism unknown; the three gain-of-function subgroups come only from Orphanet's controlled association type."
+  ],
+  "example_context_ids": [
+    "ctx:MONDO:0800491:SCN2A-gain",
+    "ctx:MONDO:1060245",
+    "ctx:MONDO:0018614:SCN8A-gain",
+    "ctx:MONDO:0100079"
+  ]
+}

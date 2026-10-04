@@ -62,3 +62,21 @@ backend handles the data; it is **not** a reviewed snapshot.
 
 The duplicate `data/orphadata/en_product6.xml` at the repository root is identical to the one under
 `hackathon-claude-repo/data/` and is not used.
+
+## Release 2026-10-04 (served snapshot)
+
+`snapshots/snap_21b5b209…fd142.json` (10.7 MB): 41 contexts, 1,017 entities, 2,500 assertions, 87 comparison cards,
+174 calculations, 0 withheld; 2,848 route payloads validated. Accepted by the project owner in one blanket decision
+without per-record inspection (`scripts/build_release.py`). Not in this release: literature-extracted claims (needs an
+OpenAI key and budget, then context assignment), so the three gain-of-function subgroups have no subgroup phenotype
+profile and only unranked cards; opportunities, gaps and explanations (need human-written imports). The FamilieSCN2A
+organization and its two resources (CTRS, DRAGONFLY registry) are covered by the same acceptance and appear in
+`/contexts/ctx:MONDO:1060245/actions` as exact-disease assets. 11 contexts have no comparable phenotype profile and show no similarity link.
+
+
+## Release update (NORD organizations)
+
+`snapshots/snap_cf01baf8…6ef0.json`: adds the Dravet Syndrome Foundation and the Congenital Myasthenic Syndrome Association (linked to "congenital myasthenic syndrome", the Mondo class above SNAP25's CMS 18, through a cited `disease_subclass_of` link); the 11 records of the "benign familial neonatal-infantile seizures" NORD search were all unrelated and were not linked (NORD organization directory export, serves
+Dravet syndrome, MONDO:0100135). One NORD record was not linked because its disease field ("Dravet Syndrome
+Foundation,") names no disease. The export's capture time was not recorded; `fetched_at` is the time it was received.
+Accepted under the same blanket decision by the project owner.

@@ -1,0 +1,10 @@
+{
+  "contract_version": "1.0.0",
+  "snapshot_id": null,
+  "error": {
+    "code": "SNAPSHOT_UNAVAILABLE",
+    "message": "The reviewed snapshot is not ready.",
+    "request_id": "fixture-503",
+    "retryable": true
+  }
+}

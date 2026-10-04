@@ -1,0 +1,15 @@
+{
+  "_comment": "Created by the product/review owner from real source records (master plan section 2). All fields are null until a person fills them; nothing here is preapproved.",
+  "starting_context_id": null,
+  "user_question": null,
+  "existing_exact_disease_assets": [],
+  "unmet_need": null,
+  "candidate_partner_ids": [],
+  "candidate_asset_ids": [],
+  "supporting_source_ids": [],
+  "compatibility_question": null,
+  "counterexample": null,
+  "gap_case": null,
+  "reviewer": null,
+  "reviewed_at": null
+}

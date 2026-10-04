@@ -1,0 +1,10 @@
+{
+  "contract_version": "1.0.0",
+  "snapshot_id": "snap_fixture_20261003",
+  "error": {
+    "code": "INVALID_REQUEST",
+    "message": "The search query must contain 1 to 200 characters.",
+    "request_id": "fixture-422",
+    "retryable": false
+  }
+}

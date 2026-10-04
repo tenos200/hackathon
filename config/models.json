@@ -1,0 +1,23 @@
+{
+  "_comment": "Model IDs, settings and pricing are configuration, verified by a team member before any paid run. Unverified pricing refuses paid calls.",
+  "extraction": {
+    "model": null,
+    "prompt_version": "extraction_v1",
+    "settings": {},
+    "max_output_tokens": 4000
+  },
+  "checking": {
+    "model": null,
+    "prompt_version": "checking_v1",
+    "settings": {},
+    "max_output_tokens": 1500
+  },
+  "pricing": {
+    "<model id>": {
+      "input_usd_per_1m": null,
+      "output_usd_per_1m": null,
+      "verified_by": null,
+      "verified_at": null
+    }
+  }
+}

@@ -87,7 +87,7 @@ backend owner and the human before the real snapshot is frozen.
 ## Added with the real-data ingest
 
 16. **Additive extension (proposed 1.1.0).** Entity, graph, cluster and network routes plus three source-only predicates
-    (`mentions`, `investigator_on`, `funds`) are proposed in `contracts/extension-1.1.0/PROPOSAL.md`. They answer the
+    (`mentions`, `investigator_on`, `funds`, `disease_subclass_of`) are proposed in `contracts/extension-1.1.0/PROPOSAL.md`. They answer the
     challenge brief's graph, clustering and network-overlap requirements without changing any 1.0.0 shape.
 
 17. **Large reference files** (Mondo, HPO JSON, GenCC, GO, Orphadata) are source documents identified by raw SHA-256
@@ -98,3 +98,18 @@ backend owner and the human before the real snapshot is frozen.
     from GenCC, Orphanet and Mondo records (`atlas/real_data.py`), and Orphanet's controlled association type is the only
     source of the three mechanism subgroups. They remain drafts until a person accepts them; `review-batch` records a
     named person's decision over a filtered set and never runs automatically.
+
+## Added with the research assistant
+
+19. **Model calls at request time.** The master plan forbids model calls on API HTTP requests; the challenge brief asks
+    for OpenAI to "Explain: turn a graph path into plain language". *Implemented:* the read API is unchanged and never
+    calls a model. A separate service (`atlas/agent`, Render service `atlas-assistant`) holds the only model key
+    (`ATLAS_AGENT_OPENAI_API_KEY`, which the read API refuses), reads the same published snapshot read-only, refuses to
+    run without a positive daily budget and prices, and answers only through read-only tools. Every cited ID must have
+    been returned by a tool in that conversation and must resolve in the snapshot; otherwise it is removed and the
+    block is labelled `unsupported`. Answers carry an `AI_GENERATED` warning and are never stored as records.
+    *Proposal:* accept this as the "Explain" layer; keep extraction offline as specified.
+
+20. **Shared-process clusters.** `/v1/clusters` adds basis `shared_process`: genes annotated (GO GAF) to the same
+    biological process, grouped by gene set. Labels are GO IDs until the GO ontology is uploaded.
+

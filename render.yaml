@@ -1,0 +1,64 @@
+# Render Blueprint for the public read-only API. Contains no credentials.
+# Secrets marked `sync: false` are entered manually in the Render dashboard
+# when the Blueprint is created (see README "Deploy to Render").
+# Nothing here has been deployed by the coding agent; no plan purchase is implied.
+services:
+  - type: web
+    name: atlas-api
+    runtime: python
+    plan: free            # free services sleep after idle time; decide explicitly before judging
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn atlas.api.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /readyz
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.3     # the runtime the test suite was run on
+      - key: ATLAS_DATA_MODE
+        sync: false       # explicit: `real` for judging, `synthetic_fixture` only for interface tests
+      - key: ATLAS_SNAPSHOT_ID
+        sync: false       # full snap_<sha256> printed by scripts/build_release.py (real mode)
+      - key: ATLAS_SNAPSHOT_BACKEND
+        value: file       # file = committed package in snapshots/; postgres = published database (needs ATLAS_DATABASE_URL)
+      - key: ATLAS_SNAPSHOT_FILE
+        sync: false       # snapshots/<snapshot id>.json (file backend, real mode)
+      - key: ATLAS_DATABASE_URL
+        sync: false       # read-only atlas_api login role, TLS (postgres backend only)
+      - key: ATLAS_ALLOWED_ORIGINS
+        sync: false       # JSON array of exact frontend origins, e.g. ["https://app.example"]
+      - key: ATLAS_RATE_LIMIT_PER_MINUTE
+        value: "120"
+
+  # Research assistant: a SEPARATE service holding the only model key. The read API above never calls a model
+  # and refuses to start if the assistant key is present in its environment.
+  - type: web
+    name: atlas-assistant
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements-agent.txt
+    startCommand: uvicorn atlas.agent.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /healthz
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.3
+      - key: ATLAS_DATA_MODE
+        value: real
+      - key: ATLAS_SNAPSHOT_BACKEND
+        value: file
+      - key: ATLAS_SNAPSHOT_ID
+        sync: false       # same snapshot as the read API
+      - key: ATLAS_SNAPSHOT_FILE
+        sync: false       # snapshots/<snapshot id>.json
+      - key: ATLAS_ALLOWED_ORIGINS
+        sync: false       # same frontend origins as the read API
+      - key: ATLAS_AGENT_OPENAI_API_KEY
+        sync: false       # a dedicated OpenAI key for the assistant (project key with a spend limit)
+      - key: ATLAS_AGENT_MODEL
+        sync: false       # OpenAI model ID supporting the Responses API, function tools and strict JSON output
+      - key: ATLAS_AGENT_INPUT_USD_PER_1M
+        sync: false       # that model's input price per 1M tokens, from OpenAI's pricing page
+      - key: ATLAS_AGENT_OUTPUT_USD_PER_1M
+        sync: false       # output price per 1M tokens
+      - key: ATLAS_AGENT_DAILY_BUDGET_USD
+        sync: false       # positive daily cap; requests are refused once reached (resets on restart and at UTC midnight)
+      - key: ATLAS_AGENT_RATE_LIMIT_PER_MINUTE
+        value: "10"
